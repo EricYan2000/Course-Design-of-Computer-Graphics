@@ -7,5 +7,5 @@ cd RayTracing
 
 cd cmake-build-debug
 
-RayTracing.exe
+RayTracing.exe > image.ppm
 
