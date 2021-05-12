@@ -6,11 +6,29 @@
 
 #IncludeRegexTransform: 
 
+D:/C/RayTracing/MyCamera.h
+vec3.h
+D:/C/RayTracing/vec3.h
+ray.h
+D:/C/RayTracing/ray.h
+
+D:/C/RayTracing/color.h
+vec3.h
+D:/C/RayTracing/vec3.h
+iostream
+-
+
 D:/C/RayTracing/main.cpp
 iostream
 -
 vec3.h
 D:/C/RayTracing/vec3.h
+ray.h
+D:/C/RayTracing/ray.h
+color.h
+D:/C/RayTracing/color.h
+MyCamera.h
+D:/C/RayTracing/MyCamera.h
 
 D:/C/RayTracing/myRayTracing.h
 cmath
@@ -19,6 +37,10 @@ limits
 -
 random
 -
+
+D:/C/RayTracing/ray.h
+vec3.h
+D:/C/RayTracing/vec3.h
 
 D:/C/RayTracing/vec3.h
 iostream

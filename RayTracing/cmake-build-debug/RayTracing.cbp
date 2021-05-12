@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="D:/C/RayTracing/MyCamera.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="D:/C/RayTracing/color.h">
+			<Option target="RayTracing"/>
+		</Unit>
 		<Unit filename="D:/C/RayTracing/main.cpp">
 			<Option target="RayTracing"/>
 		</Unit>
