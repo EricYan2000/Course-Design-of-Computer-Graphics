@@ -11,8 +11,14 @@
 
 using std::sqrt;
 
+//// Mathematical Consts
 const double infinity = std::numeric_limits<double>::infinity();
 const double pi = 3.1415926535897932385;
+
+//// Image
+const int image_width = 256;
+const int image_height = 256;
+
 
 inline double random_double() { //random number in [0.0, 1.0)
     /*if (wants_negative)
