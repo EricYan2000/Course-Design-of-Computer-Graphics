@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="D:/C/RayTracing/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="RayTracing">
-				<Option output="D:/C/RayTracing/cmake-build-debug/RayTracing.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/C/RayTracing/cmake-build-debug"/>
+				<Option output="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/RayTracing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +32,15 @@
 					<Add directory="D:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 RayTracing"/>
-					<CompileFile command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 RayTracing"/>
+					<CompileFile command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="RayTracing/fast">
-				<Option output="D:/C/RayTracing/cmake-build-debug/RayTracing.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="D:/C/RayTracing/cmake-build-debug"/>
+				<Option output="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/RayTracing.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,52 +53,64 @@
 					<Add directory="D:/Program Files/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 RayTracing/fast"/>
-					<CompileFile command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 RayTracing/fast"/>
+					<CompileFile command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="D:/C/RayTracing/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="D:/C/RayTracing/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;D:/C/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="D:/Program Files/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/C/RayTracing/MyCamera.h">
+		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Hittable.h">
 			<Option target="RayTracing"/>
 		</Unit>
-		<Unit filename="D:/C/RayTracing/color.h">
+		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Hittable_list.h">
 			<Option target="RayTracing"/>
 		</Unit>
-		<Unit filename="D:/C/RayTracing/main.cpp">
+		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Material.h">
 			<Option target="RayTracing"/>
 		</Unit>
-		<Unit filename="D:/C/RayTracing/myRayTracing.h">
+		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/MyCamera.h">
 			<Option target="RayTracing"/>
 		</Unit>
-		<Unit filename="D:/C/RayTracing/ray.h">
+		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Sphere.h">
 			<Option target="RayTracing"/>
 		</Unit>
-		<Unit filename="D:/C/RayTracing/vec3.h">
+		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/color.h">
 			<Option target="RayTracing"/>
 		</Unit>
-		<Unit filename="D:/C/RayTracing/CMakeLists.txt">
+		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/main.cpp">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/myRayTracing.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/ray.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/vec3.h">
+			<Option target="RayTracing"/>
+		</Unit>
+		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

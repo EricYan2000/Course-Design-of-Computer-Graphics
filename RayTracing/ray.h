@@ -18,7 +18,7 @@ class ray {
         point3 origin() const { return this->orig; }
         vec3 direction() const { return this->dir; }
 
-        point3 at(double times) {
+        point3 at(double times) const {
             return this->orig + this->dir * times;
         }
 

@@ -122,5 +122,18 @@ inline vec3 unit_vector(vec3 v) {
     return v / v.length();
 }
 
+////@result: return a vector enclosed in the unit sphere
+vec3 random_in_unit_sphere() {
+    while(true) {
+        vec3 vec = vec3::random(-1, 1);
+        if (vec.length() < 1)
+            return vec;
+    }
+}
+
+vec3 random_unit_vector() {
+    return unit_vector(random_in_unit_sphere());
+}
+
 
 #endif //RAYTRACING_VEC3_H

@@ -35,7 +35,9 @@ class MyCamera
         vec3 vertical;
 };
 
-ray MyCamera::get_ray(double i, double j) { ////Precaution: i and j are double [0, 1)
+////@Precaution: i and j are double [0, 1)
+////@result: return the ray goes through the pixel {i * length, j * height}
+ray MyCamera::get_ray(double i, double j) {
     return ray(look_from, left_down_corner + i * horizontal + j * vertical - look_from);
 }
 
