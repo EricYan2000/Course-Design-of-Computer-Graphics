@@ -21,17 +21,25 @@ const double infinity = std::numeric_limits<double>::infinity();
 const double pi = 3.1415926535897932385;
 
 //// Image
-const double VIEWPORT_WIDTH = 6;
+const double VIEWPORT_WIDTH = 600;
 
+//// params for regular scnene preview
 //#define IMAGE_WIDTH 512
 //#define IMAGE_HEIGHT 396
 //const int SAMPLES_PER_PIXEL = 50;
 //const int DEPTH = 10;
 
-#define IMAGE_WIDTH 1024
-#define IMAGE_HEIGHT 792
-const int SAMPLES_PER_PIXEL = 500;
-const int DEPTH = 20;
+//// params for cornel box preview
+#define IMAGE_WIDTH 512
+#define IMAGE_HEIGHT 512
+const int SAMPLES_PER_PIXEL = 1000;
+const int DEPTH = 10;
+
+//// params for regular scene high quality preview
+//#define IMAGE_WIDTH 1024
+//#define IMAGE_HEIGHT 792
+//const int SAMPLES_PER_PIXEL = 500;
+//const int DEPTH = 20;
 
 #define IMAGE_WH_RATIO (1.0 * IMAGE_WIDTH / IMAGE_HEIGHT)
 

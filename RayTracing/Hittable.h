@@ -16,8 +16,10 @@ struct hit_record {
     point3 hit_point;
     vec3 normal;
     //Material& material;
-    shared_ptr<Material> mat_ptr;
     double distance;
+    double u;
+    double v;
+    shared_ptr<Material> mat_ptr;
     bool front_face;
 
     ////@preset: outward_normal has to be a unit_vector to ensure that normal is a unit_vector

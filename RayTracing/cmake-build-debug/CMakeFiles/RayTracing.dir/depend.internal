@@ -7,6 +7,8 @@ CMakeFiles/RayTracing.dir/main.cpp.obj
  C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Material.h
  C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/MyCamera.h
  C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Sphere.h
+ C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/aabb.h
+ C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/aarect.h
  C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/color.h
  C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/main.cpp
  C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/myRayTracing.h

@@ -1,5 +1,5 @@
 //
-// Created by SAMSUNG on 2021/5/26.
+// Created by Eric Yan on 2021/5/26.
 //
 
 #ifndef RAYTRACING_SPHERE_H

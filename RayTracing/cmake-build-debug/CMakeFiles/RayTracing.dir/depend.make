@@ -6,6 +6,8 @@ CMakeFiles/RayTracing.dir/main.cpp.obj: ../Hittable_list.h
 CMakeFiles/RayTracing.dir/main.cpp.obj: ../Material.h
 CMakeFiles/RayTracing.dir/main.cpp.obj: ../MyCamera.h
 CMakeFiles/RayTracing.dir/main.cpp.obj: ../Sphere.h
+CMakeFiles/RayTracing.dir/main.cpp.obj: ../aabb.h
+CMakeFiles/RayTracing.dir/main.cpp.obj: ../aarect.h
 CMakeFiles/RayTracing.dir/main.cpp.obj: ../color.h
 CMakeFiles/RayTracing.dir/main.cpp.obj: ../main.cpp
 CMakeFiles/RayTracing.dir/main.cpp.obj: ../myRayTracing.h

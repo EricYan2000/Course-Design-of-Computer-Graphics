@@ -48,6 +48,18 @@ C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Material
 vec3.h
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/vec3.h
 
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/aabb.h
+vec3.h
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/vec3.h
+ray.h
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/ray.h
+
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/aarect.h
+Hittable.h
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Hittable.h
+aabb.h
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/aabb.h
+
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/color.h
 vec3.h
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/vec3.h
@@ -69,6 +81,10 @@ Hittable_list.h
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Hittable_list.h
 Sphere.h
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Sphere.h
+aarect.h
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/aarect.h
+Material.h
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Material.h
 omp.h
 -
 

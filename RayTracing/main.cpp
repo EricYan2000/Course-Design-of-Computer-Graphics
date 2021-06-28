@@ -5,37 +5,43 @@
 #include "MyCamera.h"
 #include "Hittable_list.h"
 #include "Sphere.h"
+#include "aarect.h"
+#include "Material.h"
 #include <omp.h>
-
-class lambertian;
 
 using namespace std;
 
 void vector_test();
 void stage_1();
 color ray_color_stage_3(const ray& r, const Hittable& world);
-Hittable_list scene_stage4();
-color ray_color_stage4(const ray& r, const Hittable& world, int depth);
+Hittable_list scene_stage_4();
+color ray_color_stage_4(const ray& r, const Hittable& world, int depth);
+color ray_color_stage_5(const ray& r, const color& background, const Hittable& world, int depth);
 
 color color_buffer[IMAGE_WIDTH][IMAGE_HEIGHT];
 
-Hittable_list scene() {
-    Hittable_list world;
+Hittable_list cornell_box() {
+    Hittable_list objects;
 
-    auto material_ground = make_shared<lambertian>(color(0.8, 0.8, 0.0));
-    auto material_center = make_shared<lambertian>(color(0.1, 0.2, 0.5));
-    auto material_left   = make_shared<dielectric>(1.5);
-    auto material_right  = make_shared<metal>(color(0.8, 0.6, 0.2), 0.0);
-    auto material_light  = make_shared<light>(color(7.5, 7.5, 7.5));
-    ////@caution: the light's color has violated the range[0.0, 1.0] to provide more energy to light up the scene
+    auto red   = make_shared<lambertian>(color(0.65, 0.05, 0.05));
+    auto white = make_shared<lambertian>(color(0.73, 0.73, 0.73));
+    auto green = make_shared<lambertian>(color(0.12, 0.45, 0.15));
+    auto material_light = make_shared<light>(color(15, 15, 15));
 
-    world.add(make_shared<Sphere>(point3( 0.0, -100.5, -1.0), 100.0, material_ground));
-    world.add(make_shared<Sphere>(point3( 0.0,    0.0, -1.0),   0.5, material_center));
-    world.add(make_shared<Sphere>(point3(-1.0,    0.0, -1.0),   0.5, material_left));
-    world.add(make_shared<Sphere>(point3( 1.0,    0.0, -1.0),   0.5, material_right));
-    world.add(make_shared<Sphere>(point3(-0.5,    2.0, -1.0),   0.5, material_light));
+    objects.add(make_shared<yz_rect>(0, 555, 0, 555, 555, green));
+    objects.add(make_shared<yz_rect>(0, 555, 0, 555, 0, red));
+    objects.add(make_shared<xz_rect>(213, 343, 227, 332, 554, material_light));
+    objects.add(make_shared<xz_rect>(0, 555, 0, 555, 0, white));
+    objects.add(make_shared<xz_rect>(0, 555, 0, 555, 555, white));
+    objects.add(make_shared<xy_rect>(0, 555, 0, 555, 555, white));
 
-    return world;
+//    objects.add(make_shared<Sphere>(point3( 278, 278, 0), 100.0, white));
+//    objects.add(make_shared<Sphere>(point3( 330,    0, -70),   50, green));
+//    objects.add(make_shared<Sphere>(point3(555,    278, -1.0),   25, red));
+//    objects.add(make_shared<Sphere>(point3( 137,    46, -1.0),   75, green));
+//    objects.add(make_shared<Sphere>(point3(278,    555, 0),   40, material_light));
+
+    return objects;
 }
 
 color ray_color(const ray& r, const color& background, const Hittable& world, int depth) {
@@ -45,7 +51,7 @@ color ray_color(const ray& r, const color& background, const Hittable& world, in
 
     hit_record rec;
 
-    if (world.hit(r, 0.001, infinity, rec)) {
+    if (world.hit(r, 0.001, infinity, rec)) { //hit an object
         ray scattered_out;
         color attenuation;
         color emitted;
@@ -64,10 +70,12 @@ color ray_color(const ray& r, const color& background, const Hittable& world, in
 
 int main() {
     //// Camera
-    MyCamera myCamera(point3(-3.5,2,5), point3(0,0,-2), vec3(0,1,0), VIEWPORT_WIDTH, VIEWPORT_WIDTH / IMAGE_WH_RATIO);
+    //MyCamera myCamera(point3(-3.5,2,5), point3(0,0,-2), vec3(0,1,0), VIEWPORT_WIDTH, VIEWPORT_WIDTH / IMAGE_WH_RATIO);
+    MyCamera myCamera(point3(278, 278, -800), point3(278, 278, 0), vec3(0,1,0), VIEWPORT_WIDTH, VIEWPORT_WIDTH / IMAGE_WH_RATIO);
 
     //// World
-    Hittable_list world = scene();
+    //Hittable_list world = scene();
+    Hittable_list world = cornell_box();
     color background = color(0, 0, 0);
 
     //// Render
@@ -102,8 +110,52 @@ int main() {
 
 //// code of previous stages
 
+//==============stage_5=================  implementing light
+Hittable_list scene_stage_5() {
+    Hittable_list world;
+
+    auto material_ground = make_shared<lambertian>(color(0.8, 0.8, 0.0));
+    auto material_center = make_shared<lambertian>(color(0.1, 0.2, 0.5));
+    auto material_left   = make_shared<dielectric>(1.5);
+    auto material_right  = make_shared<metal>(color(0.8, 0.6, 0.2), 0.0);
+    auto material_light  = make_shared<light>(color(7.5, 7.5, 7.5));
+    ////@caution: the light's color has violated the range[0.0, 1.0] to provide more energy to light up the scene
+
+    world.add(make_shared<Sphere>(point3( 0.0, -100.5, -1.0), 100.0, material_ground));
+    world.add(make_shared<Sphere>(point3( 0.0,    0.0, -1.0),   0.5, material_center));
+    world.add(make_shared<Sphere>(point3(-1.0,    0.0, -1.0),   0.5, material_left));
+    world.add(make_shared<Sphere>(point3( 1.0,    0.0, -1.0),   0.5, material_right));
+    world.add(make_shared<Sphere>(point3(-0.5,    2.0, -1.0),   0.5, material_light));
+
+    return world;
+}
+
+color ray_color_stage_5(const ray& r, const color& background, const Hittable& world, int depth) {
+    if (depth <= 0) {
+        return color(0, 0, 0);
+    }
+
+    hit_record rec;
+
+    if (world.hit(r, 0.001, infinity, rec)) { //hit an object
+        ray scattered_out;
+        color attenuation;
+        color emitted;
+
+        emitted = rec.mat_ptr->emitted(rec.hit_point);
+
+        if (rec.mat_ptr->scatter(r, rec, attenuation, scattered_out)) {
+            return emitted + attenuation * ray_color_stage_5(scattered_out, background, world, depth - 1);
+        } else {
+            return emitted;
+        }
+    } else { //hitting nothing. return the background light
+        return background;
+    }
+}
+
 //==============stage_4==================  apply materials onto hittable objects
-Hittable_list scene_stage4() {
+Hittable_list scene_stage_4() {
     Hittable_list world;
 
     auto material_ground = make_shared<lambertian>(color(0.8, 0.8, 0.0));
@@ -119,7 +171,7 @@ Hittable_list scene_stage4() {
     return world;
 }
 
-color ray_color_stage4(const ray& r, const Hittable& world, int depth) {
+color ray_color_stage_4(const ray& r, const Hittable& world, int depth) {
     if (depth <= 0) {
         return color(0, 0, 0);
     }
@@ -130,7 +182,7 @@ color ray_color_stage4(const ray& r, const Hittable& world, int depth) {
         ray scattered_out;
         color attenuation;
         if (rec.mat_ptr->scatter(r, rec, attenuation, scattered_out)) {
-            return attenuation * ray_color_stage4(scattered_out, world, depth - 1);
+            return attenuation * ray_color_stage_4(scattered_out, world, depth - 1);
         } else {
             return color(0, 0, 0);
         }
