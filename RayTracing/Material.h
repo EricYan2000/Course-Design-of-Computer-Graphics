@@ -17,6 +17,10 @@ class Material {
         virtual bool scatter(
                 const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered
         ) const = 0;
+
+        virtual color emitted(const point3& p) const {
+            return color(0,0,0);
+        }
 };
 
 class lambertian : public Material {
@@ -93,6 +97,26 @@ class dielectric : public Material {
 
     public:
         double index_of_refraction;
+};
+
+class light : public Material {
+    public:
+        light(color light_color) {
+            this->light_color = light_color;
+        }
+
+        virtual bool scatter(
+                const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered
+        ) const override {
+            return false;
+        }
+
+        virtual color emitted(const point3& p) const override {
+            return this->light_color;
+        }
+
+    public:
+        color light_color;
 };
 
 #endif //RAYTRACING_MATERIAL_H

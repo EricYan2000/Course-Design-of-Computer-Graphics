@@ -25,12 +25,12 @@ const double VIEWPORT_WIDTH = 6;
 
 //#define IMAGE_WIDTH 512
 //#define IMAGE_HEIGHT 396
-//const int SAMPLES_PER_PIXEL = 5;
+//const int SAMPLES_PER_PIXEL = 50;
 //const int DEPTH = 10;
 
 #define IMAGE_WIDTH 1024
 #define IMAGE_HEIGHT 792
-const int SAMPLES_PER_PIXEL = 50;
+const int SAMPLES_PER_PIXEL = 500;
 const int DEPTH = 20;
 
 #define IMAGE_WH_RATIO (1.0 * IMAGE_WIDTH / IMAGE_HEIGHT)
