@@ -69,6 +69,8 @@ Hittable_list.h
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Hittable_list.h
 Sphere.h
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Sphere.h
+omp.h
+-
 
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/myRayTracing.h
 cmath

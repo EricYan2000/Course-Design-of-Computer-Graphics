@@ -21,13 +21,20 @@ const double infinity = std::numeric_limits<double>::infinity();
 const double pi = 3.1415926535897932385;
 
 //// Image
-const double image_width = 512;
-const double image_height = 396;
-//const double image_width = 1024;
-//const double image_height = 792;
-const double ratio = image_width / image_height;
-//const int samples_per_pixel = 10;
-const int samples_per_pixel = 5;
+const double VIEWPORT_WIDTH = 6;
+
+//#define IMAGE_WIDTH 512
+//#define IMAGE_HEIGHT 396
+//const int SAMPLES_PER_PIXEL = 5;
+//const int DEPTH = 10;
+
+#define IMAGE_WIDTH 1024
+#define IMAGE_HEIGHT 792
+const int SAMPLES_PER_PIXEL = 50;
+const int DEPTH = 20;
+
+#define IMAGE_WH_RATIO (1.0 * IMAGE_WIDTH / IMAGE_HEIGHT)
+
 
 //// @Caution: only positive doubles can be generated
 inline double random_double() { //random number in [0.0, 1.0)

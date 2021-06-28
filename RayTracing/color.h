@@ -16,6 +16,13 @@ void write_color_stream(std::ostream &out, color pixel_color) {
         << (int)(255.999 * pixel_color.z()) << '\n';
 }
 
+void write_color_stream_gamma2(std::ostream &out, color pixel_color) {
+    //// gamma 2 modification
+    out << (int)(255.999 * sqrt(pixel_color.x())) << ' '
+        << (int)(255.999 * sqrt(pixel_color.y())) << ' '
+        << (int)(255.999 * sqrt(pixel_color.z())) << '\n';
+}
+
 void write_color_printf(color pixel_color) {
     printf("%d %d %d\n", 255.999 * pixel_color.x(),
            255.999 * pixel_color.y(), 255.999 * pixel_color.z());

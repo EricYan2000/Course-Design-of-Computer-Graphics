@@ -62,7 +62,7 @@ class vec3 {
         }
 
         bool near_zero() const {
-            double eps = 1e-8;
+            static double eps = 1e-8;
             return (fabs(e[0]) < eps) && (fabs(e[1]) < eps) && (fabs(e[2]) < eps);
         }
 
@@ -135,5 +135,15 @@ vec3 random_unit_vector() {
     return unit_vector(random_in_unit_sphere());
 }
 
+vec3 reflect(const vec3& v_in, const vec3& normal) {
+    return v_in - 2 * dot(v_in, normal) * normal;
+}
+
+vec3 refract(const vec3 v_in, const vec3& normal, double refraction_coef_ratio) {
+    double cos_theta = clamp(dot(-v_in, normal), -1.0, 1.0);
+    vec3 v_out_perpendicular = refraction_coef_ratio * (v_in + normal * cos_theta);
+    vec3 v_out_parallel = -sqrt(fabs(1.0 - v_out_perpendicular.length_squared())) * normal;
+    return v_out_parallel + v_out_perpendicular;
+}
 
 #endif //RAYTRACING_VEC3_H
