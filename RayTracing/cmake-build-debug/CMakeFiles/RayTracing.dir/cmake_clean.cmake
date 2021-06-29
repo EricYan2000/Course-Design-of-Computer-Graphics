@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/RayTracing.dir/IsConvex.cpp.obj"
   "CMakeFiles/RayTracing.dir/main.cpp.obj"
   "RayTracing.exe"
   "RayTracing.exe.manifest"

@@ -89,9 +89,6 @@
 		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Hittable_list.h">
 			<Option target="RayTracing"/>
 		</Unit>
-		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/IsConvex.cpp">
-			<Option target="RayTracing"/>
-		</Unit>
 		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Material.h">
 			<Option target="RayTracing"/>
 		</Unit>
