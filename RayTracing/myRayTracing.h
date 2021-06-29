@@ -29,17 +29,29 @@ const double VIEWPORT_WIDTH = 600;
 //const int SAMPLES_PER_PIXEL = 50;
 //const int DEPTH = 10;
 
-//// params for cornel box preview
-#define IMAGE_WIDTH 512
-#define IMAGE_HEIGHT 512
-const int SAMPLES_PER_PIXEL = 1000;
-const int DEPTH = 10;
-
-//// params for regular scene high quality preview
+//// params for regular scene high quality
 //#define IMAGE_WIDTH 1024
 //#define IMAGE_HEIGHT 792
 //const int SAMPLES_PER_PIXEL = 500;
 //const int DEPTH = 20;
+
+//// params for cornel box preview
+#define IMAGE_WIDTH 512
+#define IMAGE_HEIGHT 512
+const int SAMPLES_PER_PIXEL = 100;
+const int DEPTH = 10;
+
+//// params for cornel box middle quality
+//#define IMAGE_WIDTH 512
+//#define IMAGE_HEIGHT 512
+//const int SAMPLES_PER_PIXEL = 2000;
+//const int DEPTH = 10;
+
+//// params for cornel box high quality
+//#define IMAGE_WIDTH 512
+//#define IMAGE_HEIGHT 512
+//const int SAMPLES_PER_PIXEL = 20000;
+//const int DEPTH = 10;
 
 #define IMAGE_WH_RATIO (1.0 * IMAGE_WIDTH / IMAGE_HEIGHT)
 
@@ -63,6 +75,10 @@ inline double clamp(double input, double min, double max) {
         return max;
     else
         return input;
+}
+
+inline double degrees_to_radians(double degrees) {
+    return degrees * pi / 180.0;
 }
 
 #endif //RAYTRACING_MYRAYTRACING_H

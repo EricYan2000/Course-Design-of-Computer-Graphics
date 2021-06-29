@@ -7,6 +7,7 @@
 #include "Sphere.h"
 #include "aarect.h"
 #include "Material.h"
+#include "Box.h"
 #include <omp.h>
 
 using namespace std;
@@ -34,6 +35,22 @@ Hittable_list cornell_box() {
     objects.add(make_shared<xz_rect>(0, 555, 0, 555, 0, white));
     objects.add(make_shared<xz_rect>(0, 555, 0, 555, 555, white));
     objects.add(make_shared<xy_rect>(0, 555, 0, 555, 555, white));
+
+    auto glass = make_shared<dielectric>(1.5);
+    objects.add(make_shared<Sphere>(point3(425, 40, 70), 40, glass));
+
+//    objects.add(make_shared<Box>(point3(130, 0, 65), point3(295, 165, 230), white));
+//    objects.add(make_shared<Box>(point3(265, 0, 295), point3(430, 330, 460), white));
+
+    shared_ptr<Hittable> box1 = make_shared<Box>(point3(0, 0, 0), point3(165, 330, 165), white);
+    box1 = make_shared<rotate_y>(box1, 15);
+    box1 = make_shared<translate>(box1, vec3(265,0,295));
+    objects.add(box1);
+
+    shared_ptr<Hittable> box2 = make_shared<Box>(point3(0,0,0), point3(165,165,165), white);
+    box2 = make_shared<rotate_y>(box2, -18);
+    box2 = make_shared<translate>(box2, vec3(130,0,65));
+    objects.add(box2);
 
 //    objects.add(make_shared<Sphere>(point3( 278, 278, 0), 100.0, white));
 //    objects.add(make_shared<Sphere>(point3( 330,    0, -70),   50, green));
@@ -109,6 +126,30 @@ int main() {
 
 
 //// code of previous stages
+//==============stage_6=================  an empty cornell box
+Hittable_list cornell_box_stage_6() {
+    Hittable_list objects;
+
+    auto red   = make_shared<lambertian>(color(0.65, 0.05, 0.05));
+    auto white = make_shared<lambertian>(color(0.73, 0.73, 0.73));
+    auto green = make_shared<lambertian>(color(0.12, 0.45, 0.15));
+    auto material_light = make_shared<light>(color(15, 15, 15));
+
+    objects.add(make_shared<yz_rect>(0, 555, 0, 555, 555, green));
+    objects.add(make_shared<yz_rect>(0, 555, 0, 555, 0, red));
+    objects.add(make_shared<xz_rect>(213, 343, 227, 332, 554, material_light));
+    objects.add(make_shared<xz_rect>(0, 555, 0, 555, 0, white));
+    objects.add(make_shared<xz_rect>(0, 555, 0, 555, 555, white));
+    objects.add(make_shared<xy_rect>(0, 555, 0, 555, 555, white));
+
+//    objects.add(make_shared<Sphere>(point3( 278, 278, 0), 100.0, white));
+//    objects.add(make_shared<Sphere>(point3( 330,    0, -70),   50, green));
+//    objects.add(make_shared<Sphere>(point3(555,    278, -1.0),   25, red));
+//    objects.add(make_shared<Sphere>(point3( 137,    46, -1.0),   75, green));
+//    objects.add(make_shared<Sphere>(point3(278,    555, 0),   40, material_light));
+
+    return objects;
+}
 
 //==============stage_5=================  implementing light
 Hittable_list scene_stage_5() {
@@ -154,7 +195,7 @@ color ray_color_stage_5(const ray& r, const color& background, const Hittable& w
     }
 }
 
-//==============stage_4==================  apply materials onto hittable objects
+//==============stage_4==================  apply materials onto Hittable objects
 Hittable_list scene_stage_4() {
     Hittable_list world;
 

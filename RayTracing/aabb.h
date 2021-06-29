@@ -2,8 +2,8 @@
 // Created by Eric Yan on 2021/6/27.
 //
 
-#ifndef RAYTRACING_SIMPLE_AABB_H
-#define RAYTRACING_SIMPLE_AABB_H
+#ifndef RAYTRACING_AABB_H
+#define RAYTRACING_AABB_H
 
 #include "vec3.h"
 #include "ray.h"
@@ -13,8 +13,8 @@ class aabb {
         aabb() {}
         aabb(const point3& a, const point3& b) { minimum = a; maximum = b; }
 
-        point3 min() const {return minimum; }
-        point3 max() const {return maximum; }
+        point3 min() const { return minimum; }
+        point3 max() const { return maximum; }
 
         bool hit(const ray& r, double t_min, double t_max) const {
             for (int a = 0; a < 3; a++) {
@@ -66,4 +66,4 @@ aabb surrounding_box(aabb box0, aabb box1) {
     return aabb(small,big);
 }
 
-#endif //RAYTRACING_SIMPLE_AABB_H
+#endif //RAYTRACING_AABB_H

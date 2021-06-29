@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Box.h
+myRayTracing.h
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/myRayTracing.h
+aarect.h
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/aarect.h
+Hittable_list.h
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Hittable_list.h
+Hittable.h
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Hittable.h
+
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Hittable.h
 myRayTracing.h
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/myRayTracing.h
@@ -13,6 +23,10 @@ vec3.h
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/vec3.h
 ray.h
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/ray.h
+Hittable.h
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Hittable.h
+aabb.h
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/aabb.h
 
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Hittable_list.h
 myRayTracing.h
@@ -85,6 +99,8 @@ aarect.h
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/aarect.h
 Material.h
 C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Material.h
+Box.h
+C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Box.h
 omp.h
 -
 

@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Box.h">
+			<Option target="RayTracing"/>
+		</Unit>
 		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Hittable.h">
 			<Option target="RayTracing"/>
 		</Unit>

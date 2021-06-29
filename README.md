@@ -17,4 +17,4 @@ RayTracing.exe > image.ppm
 
 https://www.faststone.org/FSIVDownload.htm
 
-下载FastStone Image Viewer 7.5的exe后，安装即可使用。
+下载FastStone Image Viewer 7.5的exe，安装即可使用。
