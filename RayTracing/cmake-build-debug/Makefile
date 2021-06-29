@@ -142,6 +142,33 @@ RayTracing/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracing.dir\build.make CMakeFiles/RayTracing.dir/build
 .PHONY : RayTracing/fast
 
+IsConvex.obj: IsConvex.cpp.obj
+
+.PHONY : IsConvex.obj
+
+# target to build an object file
+IsConvex.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracing.dir\build.make CMakeFiles/RayTracing.dir/IsConvex.cpp.obj
+.PHONY : IsConvex.cpp.obj
+
+IsConvex.i: IsConvex.cpp.i
+
+.PHONY : IsConvex.i
+
+# target to preprocess a source file
+IsConvex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracing.dir\build.make CMakeFiles/RayTracing.dir/IsConvex.cpp.i
+.PHONY : IsConvex.cpp.i
+
+IsConvex.s: IsConvex.cpp.s
+
+.PHONY : IsConvex.s
+
+# target to generate assembly for a file
+IsConvex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\RayTracing.dir\build.make CMakeFiles/RayTracing.dir/IsConvex.cpp.s
+.PHONY : IsConvex.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -178,6 +205,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... RayTracing
+	@echo ... IsConvex.obj
+	@echo ... IsConvex.i
+	@echo ... IsConvex.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
