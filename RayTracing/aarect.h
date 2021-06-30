@@ -6,7 +6,6 @@
 #define RAYTRACING_AARECT_H
 
 #include "Hittable.h"
-#include "aabb.h"
 
 class xy_rect : public Hittable {
     public:

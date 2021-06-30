@@ -98,9 +98,6 @@
 		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/Sphere.h">
 			<Option target="RayTracing"/>
 		</Unit>
-		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/aabb.h">
-			<Option target="RayTracing"/>
-		</Unit>
 		<Unit filename="C:/Users/Eric Yan/Desktop/Course-Design-of-Computer-Graphics/RayTracing/aarect.h">
 			<Option target="RayTracing"/>
 		</Unit>
