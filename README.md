@@ -1,6 +1,4 @@
 # Course-Design-of-Computer-Graphics
-A ray-tracing project
-
 ### 运行方式
 
 如果使用window环境，则打开cmd，依此输入前两条命令，进入到“Course-Design-of-Computer-Graphics\RayTracing\cmake-build-debug”这一目录。随后使用cmd运行RayTracing.exe，并重定向进image.ppm文件中。
