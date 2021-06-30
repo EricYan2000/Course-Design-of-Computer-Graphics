@@ -33,13 +33,18 @@ struct hit_record {
 
 class Hittable {
     public:
+        //// this function return whether the ray r hits this object within the range of [min_distance, max_distance]
+        //// if yes, pass the hit_point information through rec
         virtual bool hit(const ray& r, double min_distance, double max_distance, hit_record& rec) const = 0;
 };
 
+//// coordinate translation
 class translate : public Hittable {
     public:
-        translate(shared_ptr<Hittable> p, const vec3& displacement)
-                : ptr(p), offset(displacement) {}
+        translate(shared_ptr<Hittable> p, const vec3& displacement) {
+            this->ptr = p;
+            this->offset = displacement;
+        }
 
         virtual bool hit(
                 const ray& r, double t_min, double t_max, hit_record& rec) const override;
@@ -49,6 +54,8 @@ class translate : public Hittable {
         vec3 offset;
 };
 
+//// move the ray, instead of the object to decide whether a hitting occurs
+//// this method introduces fewer calculation
 bool translate::hit(const ray& r, double t_min, double t_max, hit_record& rec) const {
     ray moved_r(r.origin() - offset, r.direction());
     if (!ptr->hit(moved_r, t_min, t_max, rec))
@@ -60,9 +67,15 @@ bool translate::hit(const ray& r, double t_min, double t_max, hit_record& rec) c
     return true;
 }
 
+//// an object rotates according to the y axis
 class rotate_y : public Hittable {
     public:
-        rotate_y(shared_ptr<Hittable> p, double angle);
+        rotate_y(shared_ptr<Hittable> p, double angle) {
+            this->ptr = p;
+            auto radians = degrees_to_radians(angle);
+            this->sin_theta = sin(radians);
+            this->cos_theta = cos(radians);
+        }
 
         virtual bool hit(
                 const ray& r, double t_min, double t_max, hit_record& rec) const override;
@@ -71,15 +84,11 @@ class rotate_y : public Hittable {
         shared_ptr<Hittable> ptr;
         double sin_theta;
         double cos_theta;
-        //aabb bbox;
 };
 
-rotate_y::rotate_y(shared_ptr<Hittable> p, double angle) : ptr(p) {
-    auto radians = degrees_to_radians(angle);
-    sin_theta = sin(radians);
-    cos_theta = cos(radians);
-}
-
+//// basic coordinates translation in rotation
+//// [x']  =  [cos_theta    -sin_theta] [x]
+//// [y']     [sin_theta     cos_theta] [y]
 bool rotate_y::hit(const ray& r, double t_min, double t_max, hit_record& rec) const {
     auto origin = r.origin();
     auto direction = r.direction();

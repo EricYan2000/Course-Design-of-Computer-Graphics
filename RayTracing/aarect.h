@@ -7,6 +7,7 @@
 
 #include "Hittable.h"
 
+//// surface that is perpendicular to z axis
 class xy_rect : public Hittable {
     public:
         xy_rect() {}
@@ -25,8 +26,10 @@ class xy_rect : public Hittable {
     public:
         shared_ptr<Material> mat_ptr;
         double x0, x1, y0, y1, k;
+        //// (x0, y0), (x1, y1) marks the edge of the surface. k is the surface's z intercept
 };
 
+//// surface that is perpendicular to y axis
 class xz_rect : public Hittable {
     public:
         xz_rect() {}
@@ -45,8 +48,10 @@ class xz_rect : public Hittable {
     public:
         shared_ptr<Material> mat_ptr;
         double x0, x1, z0, z1, k;
+        //// (x0, z0), (x1, z1) marks the edge of the surface. k is the surface's y intercept
 };
 
+//// surface that is perpendicular to x axis
 class yz_rect : public Hittable {
     public:
         yz_rect() {}
@@ -65,8 +70,10 @@ class yz_rect : public Hittable {
     public:
         shared_ptr<Material> mat_ptr;
         double y0, y1, z0, z1, k;
+        //// (y0, z0), (y1, z1) marks the edge of the surface. k is the surface's x intercept
 };
 
+//// algorithm reference: GAMES101-现代计算机图形学入门-闫令琪 Lecture 13 Ray Tracing 1 1:13:49
 bool xy_rect::hit(const ray& r, double t_min, double t_max, hit_record& rec) const {
     auto t = (k - r.origin().z()) / r.direction().z();
     if (t < t_min || t > t_max)
@@ -88,7 +95,7 @@ bool xy_rect::hit(const ray& r, double t_min, double t_max, hit_record& rec) con
     return true;
 }
 
-
+//// algorithm reference: GAMES101-现代计算机图形学入门-闫令琪 Lecture 13 Ray Tracing 1 1:13:49
 bool xz_rect::hit(const ray& r, double t_min, double t_max, hit_record& rec) const {
     auto t = (k - r.origin().y()) / r.direction().y();
     if (t < t_min || t > t_max)
@@ -110,7 +117,7 @@ bool xz_rect::hit(const ray& r, double t_min, double t_max, hit_record& rec) con
     return true;
 }
 
-
+//// algorithm reference: GAMES101-现代计算机图形学入门-闫令琪 Lecture 13 Ray Tracing 1 1:13:49
 bool yz_rect::hit(const ray& r, double t_min, double t_max, hit_record& rec) const {
     auto t = (k - r.origin().x()) / r.direction().x();
     if (t < t_min || t > t_max)

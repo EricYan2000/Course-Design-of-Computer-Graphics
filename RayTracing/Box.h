@@ -10,6 +10,7 @@
 #include "Hittable_list.h"
 #include "Hittable.h"
 
+//// box that is perpendicular to all 3 axis
 class Box : public Hittable {
     public:
         Box() {}
@@ -36,6 +37,7 @@ class Box : public Hittable {
         Hittable_list sides;
 };
 
+//// a ray hits this box once it hits any of the 6 surfaces
 bool Box::hit(const ray& r, double t_min, double t_max, hit_record& rec) const {
     return sides.hit(r, t_min, t_max, rec);
 }

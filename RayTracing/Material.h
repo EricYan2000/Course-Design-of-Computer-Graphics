@@ -14,10 +14,17 @@ class hit_record;
 
 class Material {
     public:
+        ////@preset: the ray r_in hits the material's owner(and object)
+        ////@input: the ray r_in
+        ////@function: this function return whether the ray will scatter after hitting the object that possesses this material
+        ////           is yes, return true, and pass hit_point information through rec, color through attenuation, the ray scatters out throught scattered
+        ////@output: true if scatters, false is not
         virtual bool scatter(
                 const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered
         ) const = 0;
 
+        ////@preset: a ray hits the material's owner(and object)
+        ////@output: return the color of light emitted by the material
         virtual color emitted(const point3& p) const {
             return color(0,0,0);
         }
@@ -27,10 +34,11 @@ class lambertian : public Material {
     public:
         lambertian(const color& a) { albedo = a; }
 
+        //// diffuse reflection
         virtual bool scatter(
                 const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered
         ) const override {
-            vec3 scatter_direction = rec.normal + random_unit_vector();
+            vec3 scatter_direction = rec.normal + random_unit_vector(); //diffuse
 
             if (scatter_direction.near_zero())
                 scatter_direction = rec.normal;
@@ -51,6 +59,7 @@ class metal : public Material {
             this->fuzz = (f < 1.0 ? f : 1.0);
         }
 
+        //// mirror reflection if fuzz == 0
         virtual bool scatter(
                 const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered
         ) const override {
@@ -71,6 +80,7 @@ class dielectric : public Material {
             this->index_of_refraction = index_of_refraction;
         }
 
+        //// refraction
         virtual bool scatter(
                 const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered
         ) const override {
@@ -111,6 +121,7 @@ class light : public Material {
             return false;
         }
 
+        //// light source
         virtual color emitted(const point3& p) const override {
             return this->light_color;
         }

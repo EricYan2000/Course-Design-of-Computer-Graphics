@@ -18,6 +18,8 @@ class ray {
         point3 origin() const { return this->orig; }
         vec3 direction() const { return this->dir; }
 
+        ////@input: pass the distance through times
+        ////@output: return the point that the ray travels after times
         point3 at(double times) const {
             return this->orig + this->dir * times;
         }

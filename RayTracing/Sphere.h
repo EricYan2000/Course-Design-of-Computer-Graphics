@@ -30,7 +30,7 @@ class Sphere : public Hittable {
 
 ////@preset: min_distance and max_distance should be larger than 0.
 ////@caution: only find the solution that is in front of the camera,
-///           which means only consider t that is greater than 0
+////          which means only consider t that is greater than 0
 ////@result: return whether this ray r hits this sphere. If yes, return hitting information through &rec
 bool Sphere::hit(const ray& r, double min_distance, double max_distance, hit_record& rec) const {
     vec3 oc = this->center - r.origin();

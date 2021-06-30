@@ -12,7 +12,7 @@
 #include <vector>
 
 class Hittable_list : public Hittable {
-    ////如果出问题了，看看是不是因为传过来的是引用
+    ////@caution: 如果出问题了，看看是不是因为传过来的是引用!!!!!!!!
     public:
         Hittable_list() {}
         Hittable_list(shared_ptr<Hittable> object_ptr) {
