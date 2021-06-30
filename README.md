@@ -15,4 +15,7 @@ RayTracing.exe > image.ppm
 
 https://www.faststone.org/FSIVDownload.htm
 
-下载FastStone Image Viewer 7.5的exe，安装即可使用。
+下载FastStone Image Viewer 7.5的exe，安装后，用FastStone Image Viewer打开Course-Design-of-Computer-Graphics\RayTracing\cmake-build-debug目录即可查看ppm文件。由于ppm格式没有经过任何压缩，图片体积较大，因此使用软件现实可能略有延迟。使用截图如下：
+
+![FIV](./doc_pics/FIV.png)
+
